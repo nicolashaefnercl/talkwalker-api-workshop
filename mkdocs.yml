@@ -1,0 +1,61 @@
+# MkDocs Material. Para publicar en GitHub Pages: mkdocs gh-deploy
+# Ajusta repo_url con la URL real de tu repositorio.
+site_name: Workshop Talkwalker API
+site_description: Documentación práctica y código de ejemplo para la API de Talkwalker
+site_author: Talkwalker Workshop
+repo_url: https://github.com/nicolashaefnercl/talkwalker-api-workshop
+edit_uri: edit/main/docs/
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+nav:
+  - Inicio: index.md
+  - Empezar:
+    - Getting Started: 01-getting-started.md
+    - Query Syntax: 02-query-syntax.md
+    - Restricciones API: api-restrictions.md
+  - Referencia API:
+    - Search API: 03-search-api.md
+    - Histogram API: 04-histogram-api.md
+    - Upload Documents: 05-upload-documents.md
+    - Streaming API: 06-streaming-api.md
+    - Export Task API: 07-export-task-api.md
+    - Topics, Filters y Tags: 08-topics-filters.md
+    - Image API: 09-image-api.md
+  - Recursos:
+    - Glosario: glossary.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
